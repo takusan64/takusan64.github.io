@@ -1,1 +1,0 @@
-# takusan64.github.io
