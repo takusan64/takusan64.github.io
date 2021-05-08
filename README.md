@@ -1,5 +1,7 @@
 # My profile page
 
+This portfolio is made with [Create React](https://github.com/facebook/create-react-app) App and [TypeScript](https://github.com/Microsoft/TypeScript).
+
 ## Easy Start
 
 ### local
