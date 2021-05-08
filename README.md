@@ -1,4 +1,4 @@
-# My gh-pages
+# My profile page
 
 ## Easy Start
 
