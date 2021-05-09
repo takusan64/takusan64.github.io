@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from '@material-ui/core';
+import { makeStyles , createStyles} from '@material-ui/styles';
+import { Theme } from '@material-ui/core/styles/createMuiTheme';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import data from './utils/data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const useStyles = makeStyles((theme: Theme)  =>
+  createStyles({
+    container: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2)
+    }
+  }
+));
+
+const App: React.FC = () => {
+  const classes = useStyles();
+
+  return(
+    <>
+      <Header header={data.header} />
+      <Container className={classes.container} maxWidth="lg">
+        <Footer footer={data.footer} />
+      </Container>
+    </>
+  )
 }
 
 export default App;
