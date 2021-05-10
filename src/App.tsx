@@ -4,6 +4,7 @@ import { makeStyles , createStyles} from '@material-ui/styles';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Contents from './components/Contents';
 import data from './utils/data'
 
 const useStyles = makeStyles((theme: Theme)  =>
@@ -22,6 +23,7 @@ const App: React.FC = () => {
     <>
       <Header header={data.header} />
       <Container className={classes.container} maxWidth="lg">
+        <Contents header={data.header} />
         <Footer footer={data.footer} />
       </Container>
     </>

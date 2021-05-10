@@ -5,6 +5,7 @@ import { Theme } from '@material-ui/core/styles/createMuiTheme';
 import {Footer as IFooter} from '../utils/interface'
 import github from '../images/github-icon.png'
 import qiita from '../images/qiita-icon.png'
+import youtube from '../images/youtube-icon.png'
 
 const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
@@ -28,14 +29,21 @@ const Footer: React.FC<FooterProps> = ({footer}) => {
   return (
     <>
       <Typography className={classes.contact} align="center">
-        <Link href={footer.contacts.github.url}>
+        <Link href={footer.contacts.github.url} target="_blank" rel="noopener">
           <img
             src={github}
             alt={footer.contacts.github.discription}
             className={classes.images}
           />
         </Link>
-        <Link href={footer.contacts.qiita.url}>
+        <Link href={footer.contacts.youtube.url} target="_blank" rel="noopener">
+          <img
+            src={youtube}
+            alt={footer.contacts.youtube.discription}
+            className={classes.images}
+          />
+        </Link>
+        <Link href={footer.contacts.qiita.url} target="_blank" rel="noopener">
           <img
             src={qiita}
             alt={footer.contacts.qiita.discription}
