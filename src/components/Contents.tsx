@@ -1,43 +1,23 @@
-import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
-import { makeStyles , createStyles} from '@material-ui/styles';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
-import { Header as IHeader } from '../utils/interface'
-import ContentCard from './ContentCard'
+import React from 'react'
+import { makeStyles , createStyles} from '@material-ui/styles'
+import { Theme } from '@material-ui/core/styles/createMuiTheme'
+import { Contents as IContents } from '../utils/interface'
+import ContentCards from './ContentCards'
 
 const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
-    gridItem: {
-      marginBottom: theme.spacing(2)
-    },
-    title: {
-      marginTop: theme.spacing(2)
-    }
   }
-));
+))
 
-type HeaderProps = { header: IHeader }
+type ContentsProps = { contents: IContents }
 
-const Contents: React.FC<HeaderProps> = ({header}) => {
+const Contents: React.FC<ContentsProps> = ({contents}) => {
     const classes = useStyles()
     return (
       <>
-        <Grid container spacing={3} justify="center">
-          <Grid item xs={12}>
-            <Typography variant="h4" align="center">
-              Contents
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4} className={classes.gridItem}>
-            <ContentCard header={header}/>
-          </Grid>
-          <Grid item xs={12} sm={4} className={classes.gridItem}>
-            <ContentCard header={header}/>
-          </Grid>
-          <Grid item xs={12} sm={4} className={classes.gridItem}>
-            <ContentCard header={header}/>
-          </Grid>
-        </Grid>
+        {contents.content_cards.map((content_cards, i) =>
+          <ContentCards content_cards={content_cards} key={i}/>
+        )}
       </>
     )
   }

@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles , createStyles} from '@material-ui/styles';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
+import React from 'react'
+import { makeStyles , createStyles} from '@material-ui/styles'
+import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import clsx from 'clsx';
 import {
   Card,
@@ -12,10 +12,9 @@ import {
   Typography,
   IconButton,
   Collapse
-} from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import sample from '../images/sample.png'
-import { Header as IHeader } from '../utils/interface';
+} from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { ContentCard as IContentCard } from '../utils/interface'
 
 const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
@@ -30,12 +29,12 @@ const useStyles = makeStyles((theme: Theme)  =>
       transform: 'rotate(180deg)',
     },
   }
-));
+))
 
-type HeaderProps = { header: IHeader }
+type ContentCardProps = { content_card: IContentCard }
 
-const ContentCard: React.FC<HeaderProps> = ({header}) => {
-  const classes = useStyles();
+const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
+  const classes = useStyles()
 
   const [expanded, setExpanded] = React.useState(false);
 
@@ -48,18 +47,17 @@ const ContentCard: React.FC<HeaderProps> = ({header}) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt={content_card.title}
           height="140"
-          image={sample}
-          title="Contemplative Reptile"
+          image={content_card.src}
+          title={content_card.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {content_card.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {content_card.discription}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -80,18 +78,18 @@ const ContentCard: React.FC<HeaderProps> = ({header}) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
+          <Typography gutterBottom variant="h6"  component="h2">
+            {content_card.content_card_detail.title}
           </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography>
+          {content_card.content_card_detail.discription.map((card_detail_discription, i) =>
+            <Typography variant="body2" color="textSecondary" component="p" key={i}>
+              {card_detail_discription}
+            </Typography>
+          )}
         </CardContent>
       </Collapse>
     </Card>
-  );
+  )
 }
 
 export default ContentCard

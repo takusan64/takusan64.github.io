@@ -1,10 +1,10 @@
-import React from 'react';
-import { Container } from '@material-ui/core';
-import { makeStyles , createStyles} from '@material-ui/styles';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Contents from './components/Contents';
+import React from 'react'
+import { Container } from '@material-ui/core'
+import { makeStyles , createStyles} from '@material-ui/styles'
+import { Theme } from '@material-ui/core/styles/createMuiTheme'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Contents from './components/Contents'
 import data from './utils/data'
 
 const useStyles = makeStyles((theme: Theme)  =>
@@ -14,20 +14,20 @@ const useStyles = makeStyles((theme: Theme)  =>
       marginBottom: theme.spacing(2)
     }
   }
-));
+))
 
 const App: React.FC = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return(
     <>
       <Header header={data.header} />
       <Container className={classes.container} maxWidth="lg">
-        <Contents header={data.header} />
+        <Contents contents={data.contents} />
         <Footer footer={data.footer} />
       </Container>
     </>
   )
 }
 
-export default App;
+export default App

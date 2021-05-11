@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles'
 import { indigo, red, grey } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
@@ -29,6 +29,6 @@ const theme = createMuiTheme({
         variant: "outlined"
     }
   }
-});
+})
 
 export default theme
