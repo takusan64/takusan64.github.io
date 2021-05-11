@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme)  =>
       },
     },
     images: {
-      height: '60px',
+      height: '40px',
        width: 'auto'
     }
   }
