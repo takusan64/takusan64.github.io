@@ -62,9 +62,19 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
         </CardContent>
       </CardActionArea>
       <CardActions disableSpacing>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+        {!content_card.url? (
+          <></>
+          ) : (
+          <Button
+            size="small"
+            color="primary"
+            href={content_card.url}
+            target="_blank"
+            rel="noopener"
+          >
+            Learn More
+          </Button>
+        )}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -76,18 +86,22 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography gutterBottom variant="h6"  component="h2">
-            {content_card.content_card_detail.title}
-          </Typography>
-          {content_card.content_card_detail.discription.map((card_detail_discription, i) =>
-            <Typography variant="body2" color="textSecondary" component="p" key={i}>
-              {card_detail_discription}
+      {!content_card.content_card_detail? (
+        <></>
+        ) : (
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography gutterBottom variant="h6"  component="h2">
+              {content_card.content_card_detail.title}
             </Typography>
-          )}
-        </CardContent>
-      </Collapse>
+            {content_card.content_card_detail.discription.map((card_detail_discription, i) =>
+              <Typography variant="body2" color="textSecondary" component="p" key={i}>
+                {card_detail_discription}
+              </Typography>
+            )}
+          </CardContent>
+        </Collapse>
+        )}
     </Card>
   )
 }

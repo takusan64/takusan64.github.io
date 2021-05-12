@@ -11,15 +11,22 @@ export interface ContentCard {
     title: string,
     discription: string,
     src: string,
-    content_card_detail: ContentCardDetail
+    url?: string,
+    content_card_detail?: ContentCardDetail
 }
 
 export interface ContentCards {
-    title: string,
+    title?: string,
     content_card: Array<ContentCard>
 }
 
+export interface ContentTypography {
+    title: string,
+    discription: string
+}
+
 export interface Contents {
+    content_typography: Array<ContentTypography>,
     content_cards: Array<ContentCards>
 }
 

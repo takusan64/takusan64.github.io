@@ -23,7 +23,9 @@ const App: React.FC = () => {
     <>
       <Header header={data.header} />
       <Container className={classes.container} maxWidth="lg">
-        <Contents contents={data.contents} />
+        {data.contents.map((contents, i) =>
+          <Contents contents={contents} key={i}/>
+        )}
         <Footer footer={data.footer} />
       </Container>
     </>

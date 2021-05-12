@@ -23,16 +23,20 @@ const ContentCards: React.FC<ContentCardsProps> = ({content_cards}) => {
     return (
       <>
         <Grid container spacing={3} justify="center">
+          {!content_cards.title? (
+            <></>
+          ) : (
             <Grid item xs={12}>
               <Typography variant="h4" align="center">
                 {content_cards.title}
               </Typography>
             </Grid>
-            {content_cards.content_card.map((content_card, i) =>
-              <Grid item xs={12} sm={4} className={classes.gridItem} key={i}>
-                <ContentCard content_card={content_card} />
-              </Grid>
-            )}
+          )}
+          {content_cards.content_card.map((content_card, i) =>
+            <Grid item xs={12} sm={4} className={classes.gridItem}  key={i}>
+              <ContentCard content_card={content_card} />
+            </Grid>
+          )}
         </Grid>
       </>
     )
