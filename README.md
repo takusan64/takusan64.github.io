@@ -26,3 +26,11 @@ docker-compose up
 yarn build
 yarn deploy
 ```
+
+## My Task
+
+- [×] Make Profile Card Component
+- [ ] Make Profile Table Component
+- [ ] Add Multilingual Functionality(ja & en)
+- [ ] Show AppBar only on small displays
+- [ ] Add a Button to return to the top of the page
