@@ -29,7 +29,7 @@ yarn deploy
 
 ## My Task
 
-- [×] Make Profile Card Component
+- [x] Make Profile Card Component
 - [ ] Make Profile Table Component
 - [ ] Add Multilingual Functionality(ja & en)
 - [ ] Show AppBar only on small displays
