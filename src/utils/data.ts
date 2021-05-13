@@ -1,23 +1,25 @@
 const data = {
   header:{
-    title: "My Profile"
+    title: "SiteLogo",
+    logo: `${process.env.PUBLIC_URL}/logo172.png`
   },
   contents:[
     {
       content_typography:[
         {
           title: "ContentTypography",
-          discription: "ContentTypographyContentTypography. ContentTypographyContentTypography. "
+          discription: "ContentTypographyContentTypographyContentTypographyContentTypography."
         }
       ],
       content_cards:[
         {
-          title: "Sample",
+          title: "",
           content_card: [
             {
               title: "Sample1",
               discription: "Sample1Sample1Sample1",
               src: `${process.env.PUBLIC_URL}/images/sample.png`,
+              url:"https://github.com/takusan64",
               content_card_detail: {
                 title: "detail1",
                 discription: ["detail1detail1detail1"]

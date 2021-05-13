@@ -1,10 +1,10 @@
 import React from 'react'
 import { makeStyles , createStyles} from '@material-ui/styles'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
+import { grey } from '@material-ui/core/colors'
 import clsx from 'clsx';
 import {
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
@@ -28,6 +28,11 @@ const useStyles = makeStyles((theme: Theme)  =>
     expandOpen: {
       transform: 'rotate(180deg)',
     },
+    button:{
+      '&:hover': {
+        background: grey[200]
+      },
+    }
   }
 ))
 
@@ -44,33 +49,32 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
 
   return (
     <Card>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt={content_card.title}
-          height="140"
-          image={content_card.src}
-          title={content_card.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {content_card.title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {content_card.discription}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        component="img"
+        alt={content_card.title}
+        height="160"
+        image={content_card.src}
+        title={content_card.title}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {content_card.title}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {content_card.discription}
+        </Typography>
+      </CardContent>
       <CardActions disableSpacing>
         {!content_card.url? (
           <></>
           ) : (
           <Button
-            size="small"
+            variant="text"
             color="primary"
             href={content_card.url}
             target="_blank"
             rel="noopener"
+            className={classes.button}
           >
             Learn More
           </Button>

@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import { indigo, red, grey } from '@material-ui/core/colors'
+import { red, grey } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
   palette: {
@@ -7,7 +7,7 @@ const theme = createMuiTheme({
       main: grey[900],
     },
     secondary: {
-      main: indigo[900]
+      main: "#E1A87A"
     },
     error: {
       main: red["500"],
@@ -23,6 +23,13 @@ const theme = createMuiTheme({
         textTransform: "none"
     },
     fontSize: 12
+  },
+  overrides: {
+    MuiTypography: {
+      root: {
+        wordWrap: "break-word"
+      }
+   },
   },
   props: {
     MuiTextField: {

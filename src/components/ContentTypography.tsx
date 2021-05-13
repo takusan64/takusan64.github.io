@@ -25,7 +25,7 @@ const ContentTypography: React.FC<ContentsProps> = ({content_typography}) => {
                         {content_typography.title}
                     </Box>
                 </Typography>
-                <Typography variant="body1" gutterBottom className={classes.discription}>
+                <Typography variant="body1" gutterBottom className={classes.discription} align="center">
                     {content_typography.discription}
                 </Typography>
             </Grid>

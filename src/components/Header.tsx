@@ -6,6 +6,10 @@ import { Header as IHeader } from '../utils/interface'
 
 const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
+    logo:{
+      background: theme.palette.primary.main,
+      border:0
+    }
   }
 ))
 
@@ -16,9 +20,12 @@ const Header: React.FC<HeaderProps> = ({header}) => {
     return (
       <AppBar position="relative">
         <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            {header.title}
-          </Typography>
+          <img
+            src={header.logo}
+            height={30}
+            className={classes.logo}
+            alt={header.title}
+          />
         </Toolbar>
       </AppBar>
     )
