@@ -5,47 +5,47 @@ const data = {
   },
   contents:[
     {
-      content_typography:[
-        {
-          title: "ContentTypography",
-          discription: "ContentTypographyContentTypographyContentTypographyContentTypography."
-        }
-      ],
-      content_cards:[
-        {
-          title: "",
-          content_card: [
-            {
-              title: "Sample1",
-              discription: "Sample1Sample1Sample1",
-              src: `${process.env.PUBLIC_URL}/images/sample.png`,
-              url:"https://github.com/takusan64",
-              content_card_detail: {
-                title: "detail1",
-                discription: ["detail1detail1detail1"]
-              }
-            },
-            {
-              title: "Sample2",
-              discription: "Sample2Sample2Sample2",
-              src: `${process.env.PUBLIC_URL}/images/sample.png`,
-              content_card_detail: {
-                title: "detail2",
-                discription: ["detail2detail2detail2"]
-              }
-            },
-            {
-              title: "Sample3",
-              discription: "Sample3Sample3Sample3",
-              src: `${process.env.PUBLIC_URL}/images/sample.png`,
-              content_card_detail: {
-                title: "detail3",
-                discription: ["detail3detail3detail3"]
-              }
+      type: "typography",
+      content:{
+        title: "ContentTypography",
+        discription: "ContentTypographyContentTypographyContentTypographyContentTypography."
+      }
+    },
+    {
+      type: "card",
+      content:{
+        title: "",
+        content_card: [
+          {
+            title: "Sample1",
+            discription: "Sample1Sample1Sample1",
+            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            url:"https://github.com/takusan64",
+            content_card_detail: {
+              title: "detail1",
+              discription: ["https://github.com/takusan64"]
             }
-          ]
-        }
-      ]
+          },
+          {
+            title: "Sample2",
+            discription: "Sample2Sample2Sample2",
+            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            content_card_detail: {
+              title: "detail2",
+              discription: ["detail2detail2detail2"]
+            }
+          },
+          {
+            title: "Sample3",
+            discription: "Sample3Sample3Sample3",
+            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            content_card_detail: {
+              title: "detail3",
+              discription: ["detail3detail3detail3"]
+            }
+          }
+        ]
+      }
     }
   ],
   footer:{

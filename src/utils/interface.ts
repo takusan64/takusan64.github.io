@@ -16,19 +16,15 @@ export interface ContentCard {
     content_card_detail?: ContentCardDetail
 }
 
-export interface ContentCards {
+export interface Content {
     title?: string,
-    content_card: Array<ContentCard>
-}
-
-export interface ContentTypography {
-    title: string,
-    discription: string
+    discription?: string,
+    content_card?: Array<ContentCard>
 }
 
 export interface Contents {
-    content_typography: Array<ContentTypography>,
-    content_cards: Array<ContentCards>
+    type: string,
+    content: Content
 }
 
 export interface Contacts {

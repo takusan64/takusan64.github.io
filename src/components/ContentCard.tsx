@@ -54,7 +54,6 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
         alt={content_card.title}
         height="160"
         image={content_card.src}
-        title={content_card.title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">

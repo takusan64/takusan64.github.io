@@ -8,25 +8,33 @@ import ContentTypography from './ContentTypography'
 
 const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
+    container: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2)
+    }
   }
 ))
 
 type ContentsProps = { contents: IContents }
 
 const Contents: React.FC<ContentsProps> = ({contents}) => {
-    const classes = useStyles()
-    return (
-      <>
-        <Container maxWidth="md">
-          {contents.content_typography.map((content_typography, i) =>
-            <ContentTypography content_typography={content_typography} key={i}/>
-          )}
-        </Container>
-        {contents.content_cards.map((content_cards, i) =>
-          <ContentCards content_cards={content_cards} key={i}/>
-        )}
-      </>
-    )
-  }
+  const classes = useStyles()
 
-  export default Contents
+  return (
+    <>
+      <Container className={classes.container} maxWidth="lg">
+        <div>
+          {(() => {
+            if (contents.type==="card") {
+              return <ContentCards content={contents.content} />
+            } else if(contents.type==="typography") {
+              return <ContentTypography content={contents.content} />
+            }
+          })()}
+        </div>
+      </Container>
+    </>
+  )
+}
+
+export default Contents

@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar, Toolbar, Typography} from '@material-ui/core'
+import {AppBar, Toolbar } from '@material-ui/core'
 import { makeStyles , createStyles} from '@material-ui/styles'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import { Header as IHeader } from '../utils/interface'
@@ -18,7 +18,7 @@ type HeaderProps = { header: IHeader }
 const Header: React.FC<HeaderProps> = ({header}) => {
     const classes = useStyles()
     return (
-      <AppBar position="relative">
+      <AppBar position="sticky">
         <Toolbar>
           <img
             src={header.logo}
