@@ -8,6 +8,12 @@ export interface ContentCardDetail {
     discription: string[],
 }
 
+export interface ContentTable {
+    title: string,
+    discription: string,
+    icon: string
+}
+
 export interface ContentCard {
     title: string,
     discription: string,
@@ -20,6 +26,7 @@ export interface Content {
     title?: string,
     discription?: string,
     content_card?: Array<ContentCard>
+    content_table?: Array<ContentTable>
 }
 
 export interface Contents {

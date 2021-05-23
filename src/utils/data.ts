@@ -5,22 +5,38 @@ const data = {
   },
   contents:[
     {
-      type: "typography",
+      type: "table",
       content:{
-        title: "ContentTypography",
-        discription: "ContentTypographyContentTypographyContentTypographyContentTypography."
+        title: "Profile",
+        discription: "ContentTable",
+        content_table:[
+          {
+            title:"名前",
+            discription:"山口 裕也",
+            icon:"Person"
+          },
+          {
+            title:"生年月日",
+            discription:"1996年 9月12日",
+            icon:"CalendarToday"
+          },
+          {
+            title:"職業",
+            discription:"システムエンジニア",
+            icon:"Work"
+          }
+        ]
       }
     },
     {
       type: "card",
       content:{
-        title: "",
+        title: "Work",
         content_card: [
           {
             title: "Sample1",
             discription: "Sample1Sample1Sample1",
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url:"https://github.com/takusan64",
             content_card_detail: {
               title: "detail1",
               discription: ["https://github.com/takusan64"]
@@ -39,6 +55,44 @@ const data = {
             title: "Sample3",
             discription: "Sample3Sample3Sample3",
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            content_card_detail: {
+              title: "detail3",
+              discription: ["detail3detail3detail3"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      type: "card",
+      content:{
+        title: "Portfolio",
+        content_card: [
+          {
+            title: "Sample1",
+            discription: "Sample1Sample1Sample1",
+            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            url:"https://github.com/takusan64",
+            content_card_detail: {
+              title: "detail1",
+              discription: ["https://github.com/takusan64"]
+            }
+          },
+          {
+            title: "Sample2",
+            discription: "Sample2Sample2Sample2",
+            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            url:"https://github.com/takusan64",
+            content_card_detail: {
+              title: "detail2",
+              discription: ["detail2detail2detail2"]
+            }
+          },
+          {
+            title: "Sample3",
+            discription: "Sample3Sample3Sample3",
+            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            url:"https://github.com/takusan64",
             content_card_detail: {
               title: "detail3",
               discription: ["detail3detail3detail3"]

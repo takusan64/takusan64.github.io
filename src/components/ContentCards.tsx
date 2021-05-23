@@ -9,9 +9,6 @@ const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
     gridItem: {
       marginBottom: theme.spacing(2)
-    },
-    title: {
-      marginTop: theme.spacing(2)
     }
   }
 ))

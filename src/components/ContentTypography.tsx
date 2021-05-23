@@ -7,7 +7,7 @@ import { Content as IContent } from '../utils/interface'
 const useStyles = makeStyles((theme: Theme)  =>
   createStyles({
     discription: {
-        fontSize: 18,
+        fontSize: 16,
       },
   }
 ))
@@ -24,7 +24,7 @@ const ContentTypography: React.FC<ContentProps> = ({content}) => {
                     {!content.title? (
                         <></>
                     ) : (
-                        <Typography variant="h3" gutterBottom align="center">
+                        <Typography variant="h4" gutterBottom align="center">
                             <Box textAlign="center" m={1}>
                                 {content.title}
                             </Box>
