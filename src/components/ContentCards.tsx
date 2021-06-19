@@ -25,7 +25,10 @@ const ContentCards: React.FC<ContentProps> = ({content}) => {
             <></>
           ) : (
             <Grid item xs={12}>
-              <Typography variant="h4" align="center">
+              <Typography variant="h4"
+              align="center"
+              id={"#" + content.title}
+            >
                 {content.title}
               </Typography>
             </Grid>
@@ -34,7 +37,7 @@ const ContentCards: React.FC<ContentProps> = ({content}) => {
             if (content.content_card) {
               const cards = content.content_card.map((content_card, i) => {
                 return (
-                  <Grid item xs={12} sm={4} className={classes.gridItem}  key={i}>
+                  <Grid item xs={12} sm={6} md={4} className={classes.gridItem}  key={i}>
                     <ContentCard content_card={content_card} />
                   </Grid>
                 )

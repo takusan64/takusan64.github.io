@@ -1,7 +1,9 @@
 const data = {
   header:{
     title: "SiteLogo",
-    logo: `${process.env.PUBLIC_URL}/logo172.png`
+    logo: `${process.env.PUBLIC_URL}/logo172.png`,
+    src: `${process.env.PUBLIC_URL}/images/sky.jpg`,
+    contents_name:["Profile", "Work", "Portfolio"]
   },
   contents:[
     {

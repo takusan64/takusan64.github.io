@@ -1,6 +1,8 @@
 export interface Header {
     title: string,
-    logo: string
+    logo: string,
+    src: string,
+    contents_name: string[]
 }
 
 export interface ContentCardDetail {
