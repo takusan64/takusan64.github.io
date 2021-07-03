@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     }
   }
-  ))
+))
 
 type HeaderProps = { header: IHeader }
 

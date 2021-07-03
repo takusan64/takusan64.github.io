@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles , createStyles} from '@material-ui/styles'
+import { makeStyles, createStyles } from '@material-ui/styles'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import { grey } from '@material-ui/core/colors'
 import clsx from 'clsx';
@@ -16,7 +16,7 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { ContentCard as IContentCard } from '../utils/interface'
 
-const useStyles = makeStyles((theme: Theme)  =>
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     expand: {
       transform: 'rotate(0deg)',
@@ -28,17 +28,30 @@ const useStyles = makeStyles((theme: Theme)  =>
     expandOpen: {
       transform: 'rotate(180deg)',
     },
-    button:{
+    button: {
       '&:hover': {
         background: grey[200]
       },
+    },
+    card_content: {
+      paddingBottom: theme.spacing(0)
+    },
+    card_action: {
+      paddingTop: theme.spacing(0),
+      paddingBottom: theme.spacing(0)
+    },
+    card_content_detail: {
+      paddingTop: theme.spacing(0),
+      "&:last-child": {
+        paddingBottom: theme.spacing(2)
+      }
     }
   }
-))
+  ))
 
 type ContentCardProps = { content_card: IContentCard }
 
-const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
+const ContentCard: React.FC<ContentCardProps> = ({ content_card }) => {
   const classes = useStyles()
 
   const [expanded, setExpanded] = React.useState(false);
@@ -48,28 +61,30 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
   };
 
   return (
-    <Card>
+    <Card className={classes.card_content}>
       <CardMedia
         component="img"
         alt={content_card.title}
         height="160"
         image={content_card.src}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
+      <CardContent className={classes.card_content}>
+        <Typography variant="h6">
           {content_card.title}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {content_card.discription}
-        </Typography>
+        {content_card.discription.map((card_discription, i) =>
+          <Typography variant="body2" color="textSecondary" component="p" key={i}>
+            {card_discription}
+          </Typography>
+        )}
       </CardContent>
       <CardActions disableSpacing>
-        {!content_card.url? (
+        {!content_card.url ? (
           <></>
-          ) : (
+        ) : (
           <Button
-            variant="text"
-            color="primary"
+            variant="contained"
+            color="inherit"
             href={content_card.url}
             target="_blank"
             rel="noopener"
@@ -89,12 +104,12 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      {!content_card.content_card_detail? (
+      {!content_card.content_card_detail ? (
         <></>
-        ) : (
+      ) : (
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography gutterBottom variant="h6"  component="h2">
+          <CardContent className={classes.card_content_detail}>
+            <Typography gutterBottom variant="subtitle1" component="h2">
               {content_card.content_card_detail.title}
             </Typography>
             {content_card.content_card_detail.discription.map((card_detail_discription, i) =>
@@ -104,7 +119,7 @@ const ContentCard: React.FC<ContentCardProps> = ({content_card}) => {
             )}
           </CardContent>
         </Collapse>
-        )}
+      )}
     </Card>
   )
 }

@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface Header {
     title: string,
     logo: string,
@@ -18,7 +20,7 @@ export interface ContentTable {
 
 export interface ContentCard {
     title: string,
-    discription: string,
+    discription: string[],
     src: string,
     url?: string,
     content_card_detail?: ContentCardDetail

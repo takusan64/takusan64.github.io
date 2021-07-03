@@ -1,52 +1,60 @@
 const data = {
-  header:{
+  header: {
     title: "SiteLogo",
     logo: `${process.env.PUBLIC_URL}/logo172.png`,
     src: `${process.env.PUBLIC_URL}/images/sky.jpg`,
-    contents_name:["Profile", "Work", "Portfolio"]
+    contents_name: ["Profile", "Work", "Portfolio"]
   },
-  contents:[
+  contents: [
     {
       type: "table",
-      content:{
+      content: {
         title: "Profile",
         discription: "ContentTable",
-        content_table:[
+        content_table: [
           {
-            title:"名前",
-            discription:"山口 裕也",
-            icon:"Person"
+            title: "名前",
+            discription: "山口 裕也",
+            icon: "Person"
           },
           {
-            title:"生年月日",
-            discription:"1996年 9月12日",
-            icon:"CalendarToday"
+            title: "生年月日",
+            discription: "1996年 9月12日",
+            icon: "CalendarToday"
           },
           {
-            title:"職業",
-            discription:"システムエンジニア",
-            icon:"Work"
+            title: "職業",
+            discription: "システムエンジニア",
+            icon: "Work"
           }
         ]
       }
     },
     {
       type: "card",
-      content:{
+      content: {
         title: "Work",
         content_card: [
           {
-            title: "Sample1",
-            discription: "Sample1Sample1Sample1",
-            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            title: "製品連携プラットフォームの開発",
+            discription: [
+              "製品間の連携を行うためのプラットフォームの開発を行っていました。",
+              "コア技術としてNode-REDを利用しています。"
+            ],
+            src: `${process.env.PUBLIC_URL}/images/work1.png`,
             content_card_detail: {
-              title: "detail1",
-              discription: ["https://github.com/takusan64"]
+              title: "仕様技術",
+              discription: [
+                "プログラム言語：Node.js/Python",
+                "通信プロトコル：HTTP/MQTT/WebSocket",
+                "開発環境：Git/Docker",
+                "OS：Winodws/Linux(RaspberryPi)"
+              ]
             }
           },
           {
             title: "Sample2",
-            discription: "Sample2Sample2Sample2",
+            discription: ["Sample2Sample2Sample2"],
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
             content_card_detail: {
               title: "detail2",
@@ -55,7 +63,7 @@ const data = {
           },
           {
             title: "Sample3",
-            discription: "Sample3Sample3Sample3",
+            discription: ["Sample3Sample3Sample3"],
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
             content_card_detail: {
               title: "detail3",
@@ -67,14 +75,14 @@ const data = {
     },
     {
       type: "card",
-      content:{
+      content: {
         title: "Portfolio",
         content_card: [
           {
             title: "Sample1",
-            discription: "Sample1Sample1Sample1",
+            discription: ["Sample1Sample1Sample1"],
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url:"https://github.com/takusan64",
+            url: "https://github.com/takusan64",
             content_card_detail: {
               title: "detail1",
               discription: ["https://github.com/takusan64"]
@@ -82,9 +90,9 @@ const data = {
           },
           {
             title: "Sample2",
-            discription: "Sample2Sample2Sample2",
+            discription: ["Sample2Sample2Sample2"],
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url:"https://github.com/takusan64",
+            url: "https://github.com/takusan64",
             content_card_detail: {
               title: "detail2",
               discription: ["detail2detail2detail2"]
@@ -92,9 +100,9 @@ const data = {
           },
           {
             title: "Sample3",
-            discription: "Sample3Sample3Sample3",
+            discription: ["Sample3Sample3Sample3"],
             src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url:"https://github.com/takusan64",
+            url: "https://github.com/takusan64",
             content_card_detail: {
               title: "detail3",
               discription: ["detail3detail3detail3"]
@@ -104,23 +112,23 @@ const data = {
       }
     }
   ],
-  footer:{
-    copy_right:"Copyright © 2021 @takusan64 All Rights Resarved.",
-    contacts:[
+  footer: {
+    copy_right: "Copyright © 2021 @takusan64 All Rights Resarved.",
+    contacts: [
       {
-        src:`${process.env.PUBLIC_URL}/images/github-icon.png`,
-        url:"https://github.com/takusan64",
-        discription:"GitHubのマイページ"
+        src: `${process.env.PUBLIC_URL}/images/github-icon.png`,
+        url: "https://github.com/takusan64",
+        discription: "GitHubのマイページ"
       },
       {
-        src:`${process.env.PUBLIC_URL}/images/youtube-icon.png`,
-        url:"https://www.youtube.com/channel/UCM8zpiYU0TBTuPXOQ18JdeQ",
-        discription:"Youtubeのマイページ"
+        src: `${process.env.PUBLIC_URL}/images/youtube-icon.png`,
+        url: "https://www.youtube.com/channel/UCM8zpiYU0TBTuPXOQ18JdeQ",
+        discription: "Youtubeのマイページ"
       },
       {
-        src:`${process.env.PUBLIC_URL}/images/qiita-icon.png`,
-        url:"https://qiita.com/takusan64",
-        discription:"Qiitaのマイページ"
+        src: `${process.env.PUBLIC_URL}/images/qiita-icon.png`,
+        url: "https://qiita.com/takusan64",
+        discription: "Qiitaのマイページ"
       }
     ]
   }
