@@ -38,14 +38,14 @@ const data = {
           {
             title: "製品連携プラットフォームの開発",
             discription: [
-              "製品間の連携を行うためのプラットフォームの開発を行っていました。",
+              "製品間の連携を行うためのプラットフォームの開発を行いました。",
               "コア技術としてNode-REDを利用しています。"
             ],
             src: `${process.env.PUBLIC_URL}/images/work1.png`,
             content_card_detail: {
-              title: "仕様技術",
+              title: "使用技術",
               discription: [
-                "プログラム言語：Node.js/Python",
+                "使用言語：Node.js/Python",
                 "通信プロトコル：HTTP/MQTT/WebSocket",
                 "開発環境：Git/Docker",
                 "OS：Winodws/Linux(RaspberryPi)"
@@ -53,21 +53,21 @@ const data = {
             }
           },
           {
-            title: "Sample2",
-            discription: ["Sample2Sample2Sample2"],
-            src: `${process.env.PUBLIC_URL}/images/sample.png`,
+            title: "入力フォーム作成アプリ",
+            discription: [
+              "様々な入力パーツを用いて、入力フォームを構築するアプリの開発を行いました。",
+              "create-react-appを用いています。"
+            ],
+            src: `${process.env.PUBLIC_URL}/images/work2.jpg`,
             content_card_detail: {
-              title: "detail2",
-              discription: ["detail2detail2detail2"]
-            }
-          },
-          {
-            title: "Sample3",
-            discription: ["Sample3Sample3Sample3"],
-            src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            content_card_detail: {
-              title: "detail3",
-              discription: ["detail3detail3detail3"]
+              title: "使用技術",
+              discription: [
+                "フロントエンド：React.js/TypeScript",
+                "バックエンド：Express",
+                "データベース：MongoDB",
+                "開発環境：Git/Docker",
+                "OS：Winodws/Linux(RaspberryPi)"
+              ]
             }
           }
         ]
@@ -79,33 +79,37 @@ const data = {
         title: "Portfolio",
         content_card: [
           {
-            title: "Sample1",
-            discription: ["Sample1Sample1Sample1"],
-            src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url: "https://github.com/takusan64",
+            title: "自己紹介サイト",
+            discription: [
+              "本サイトになります。",
+              "ViewとModelの分離を意識して作成しています。",
+              "create-react-appを用いて作成しています。"
+            ],
+            src: `${process.env.PUBLIC_URL}/images/portfolio1.png`,
+            url: "https://takusan64.github.io/",
             content_card_detail: {
-              title: "detail1",
-              discription: ["https://github.com/takusan64"]
+              title: "使用技術",
+              discription: [
+                "フロントエンド：React.js/TypeScript",
+                "本番環境：GitHug.io"
+              ]
             }
           },
           {
-            title: "Sample2",
-            discription: ["Sample2Sample2Sample2"],
-            src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url: "https://github.com/takusan64",
+            title: "設備の生産数分析のサンプル画面",
+            discription: [
+              "工作機械の生産数を分析する画面のデモになります。",
+              "社内の新製品案として作成しました。",
+              "Rechartsを用いてグラフを作成しています。"
+            ],
+            src: `${process.env.PUBLIC_URL}/images/portfolio2.png`,
+            url: "https://jsongraphdemo.herokuapp.com/",
             content_card_detail: {
-              title: "detail2",
-              discription: ["detail2detail2detail2"]
-            }
-          },
-          {
-            title: "Sample3",
-            discription: ["Sample3Sample3Sample3"],
-            src: `${process.env.PUBLIC_URL}/images/sample.png`,
-            url: "https://github.com/takusan64",
-            content_card_detail: {
-              title: "detail3",
-              discription: ["detail3detail3detail3"]
+              title: "使用技術",
+              discription: [
+                "フロントエンド：React.js/TypeScript",
+                "本番環境：Heroku"
+              ]
             }
           }
         ]
