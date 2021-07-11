@@ -48,7 +48,7 @@ const data = {
                 "使用言語：Node.js/Python",
                 "通信プロトコル：HTTP/MQTT/WebSocket",
                 "開発環境：Git/Docker",
-                "OS：Winodws/Linux(RaspberryPi)"
+                "OS：Winodws/Linux(RaspberryPi OS)"
               ]
             }
           },
@@ -66,7 +66,7 @@ const data = {
                 "バックエンド：Express",
                 "データベース：MongoDB",
                 "開発環境：Git/Docker",
-                "OS：Winodws/Linux(RaspberryPi)"
+                "OS：Winodws/Linux(RaspberryPi OS)"
               ]
             }
           }
