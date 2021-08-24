@@ -82,7 +82,7 @@ const data = {
             title: "自己紹介サイト",
             discription: [
               "本サイトになります。",
-              "ViewとModelの分離を意識して作成しています。",
+              "PC, Mobil端末の両方で閲覧できます。",
               "create-react-appを用いて作成しています。"
             ],
             src: `${process.env.PUBLIC_URL}/images/portfolio1.png`,
