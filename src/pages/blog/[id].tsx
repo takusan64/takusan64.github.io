@@ -32,15 +32,13 @@ const BlogId: React.VFC<Props> = ({ blog }) => {
 
 export default BlogId
 
-// 静的生成のためのパスを指定します
 export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.get({ endpoint: "myblog" });
 
-  const paths = data.contents.map((content: Content) => `/blogs/${content.id}`);
+  const paths = data.contents.map((content: Content) => `/blog/${content.id}`);
   return { paths, fallback: false };
 };
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const id = context.params!.id;
   const blog = await client.get({ endpoint: "myblog", contentId: id });

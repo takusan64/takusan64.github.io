@@ -29,7 +29,6 @@ const Home:React.VFC<Props> = ({blogs}) => {
 
 export default Home
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps: GetStaticProps = async () => {
   const blogData = await client.get({ endpoint: "myblog" })
 
